@@ -40,8 +40,9 @@ public class searchpage extends javax.swing.JFrame {
         title3 = new javax.swing.JLabel();
         cate3 = new javax.swing.JLabel();
         searchbar = new javax.swing.JPanel();
-        search_btn = new javax.swing.JButton();
         search_box = new javax.swing.JTextField();
+        jPanel5 = new javax.swing.JPanel();
+        jLabel5 = new javax.swing.JLabel();
         titles = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -180,16 +181,7 @@ public class searchpage extends javax.swing.JFrame {
 
         searchbar.setBackground(new java.awt.Color(11, 11, 11));
 
-        search_btn.setBackground(new java.awt.Color(0, 0, 0));
-        search_btn.setForeground(new java.awt.Color(255, 255, 255));
-        search_btn.setText("Search");
-        search_btn.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        search_btn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                search_btnActionPerformed(evt);
-            }
-        });
-
+        search_box.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         search_box.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         search_box.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -197,14 +189,37 @@ public class searchpage extends javax.swing.JFrame {
             }
         });
 
+        jPanel5.setBackground(new java.awt.Color(51, 51, 51));
+        jPanel5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
+
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/icons8_Search_18px.png"))); // NOI18N
+        jLabel5.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+
+        javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
+        jPanel5.setLayout(jPanel5Layout);
+        jPanel5Layout.setHorizontalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel5Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel5)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPanel5Layout.setVerticalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel5Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel5)
+                .addContainerGap(8, Short.MAX_VALUE))
+        );
+
         javax.swing.GroupLayout searchbarLayout = new javax.swing.GroupLayout(searchbar);
         searchbar.setLayout(searchbarLayout);
         searchbarLayout.setHorizontalGroup(
             searchbarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(searchbarLayout.createSequentialGroup()
-                .addGap(294, 294, 294)
-                .addComponent(search_btn)
-                .addGap(0, 0, 0)
+                .addGap(328, 328, 328)
+                .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(search_box, javax.swing.GroupLayout.PREFERRED_SIZE, 388, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(339, Short.MAX_VALUE))
         );
@@ -212,10 +227,10 @@ public class searchpage extends javax.swing.JFrame {
             searchbarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(searchbarLayout.createSequentialGroup()
                 .addGap(13, 13, 13)
-                .addGroup(searchbarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(search_btn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(search_box, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(15, 15, 15))
+                .addGroup(searchbarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(search_box))
+                .addContainerGap())
         );
 
         titles.setFont(new java.awt.Font("Franklin Gothic Demi", 0, 48)); // NOI18N
@@ -251,10 +266,6 @@ public class searchpage extends javax.swing.JFrame {
     private void search_boxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_search_boxActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_search_boxActionPerformed
-
-    private void search_btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_search_btnActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_search_btnActionPerformed
 
     /**
      * @param args the command line arguments
@@ -298,12 +309,15 @@ public class searchpage extends javax.swing.JFrame {
     private javax.swing.JLabel img1;
     private javax.swing.JLabel img2;
     private javax.swing.JLabel img3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JPanel jPanel4;
+    private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel result1;
     private javax.swing.JPanel result2;
     private javax.swing.JPanel result3;
     private javax.swing.JPanel result_box;
     private javax.swing.JTextField search_box;
-    private javax.swing.JButton search_btn;
     private javax.swing.JPanel searchbar;
     private javax.swing.JLabel title1;
     private javax.swing.JLabel title2;
