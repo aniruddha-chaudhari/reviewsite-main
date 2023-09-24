@@ -6,7 +6,7 @@ package app;
 
 import java.awt.Image;
 import java.awt.Toolkit;
-import javax.swing.ImageIcon;
+    import javax.swing.ImageIcon;
 
 /**
  *
@@ -106,7 +106,7 @@ public class home extends javax.swing.JFrame {
 
         jPanel2.setBackground(new java.awt.Color(0, 0, 0));
 
-        poster_box.setIcon(new javax.swing.ImageIcon("C:\\Users\\Samruddhi\\Desktop\\aniruddha\\JAVA\\download.jpg")); // NOI18N
+        poster_box.setIcon(new javax.swing.ImageIcon("src/Image/download.jpg")); // NOI18N
 
         jLabel2.setFont(new java.awt.Font("Franklin Gothic Demi", 0, 18)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
