@@ -3,11 +3,6 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package app;
-
-/**
- *
- * @author Samruddhi
- */
 public class searchpage extends javax.swing.JFrame {
 
     /**
@@ -191,6 +186,7 @@ public class searchpage extends javax.swing.JFrame {
         });
 
         search_box.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        search_box.setBorder(javax.swing.BorderFactory.createCompoundBorder(search_box.getBorder(),javax.swing.BorderFactory.createEmptyBorder(5, 7, 5, 10)));
         search_box.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 search_boxActionPerformed(evt);
