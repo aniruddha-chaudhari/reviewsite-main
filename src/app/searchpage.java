@@ -22,26 +22,27 @@ public class searchpage extends javax.swing.JFrame {
     private void initComponents() {
 
         result_box = new javax.swing.JPanel();
-        result1 = new javax.swing.JPanel();
         img1 = new javax.swing.JLabel();
         title1 = new javax.swing.JLabel();
         cate1 = new javax.swing.JLabel();
-        result2 = new javax.swing.JPanel();
         img2 = new javax.swing.JLabel();
         title2 = new javax.swing.JLabel();
         cate2 = new javax.swing.JLabel();
-        result3 = new javax.swing.JPanel();
+        result1 = new rectro(35);
+        result2 = new rectro(35);
+        result3 = new rectro(35);
         img3 = new javax.swing.JLabel();
         title3 = new javax.swing.JLabel();
         cate3 = new javax.swing.JLabel();
         searchbar = new javax.swing.JPanel();
         search_btn = new javax.swing.JButton();
-        search_box = new javax.swing.JTextField();
+        search_box = new app.textbx(26);
         titles = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         result1.setBackground(new java.awt.Color(255, 255, 255));
+        result1.setOpaque(false);
 
         img1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/download.jpg"))); // NOI18N
 
@@ -78,6 +79,7 @@ public class searchpage extends javax.swing.JFrame {
         );
 
         result2.setBackground(new java.awt.Color(255, 255, 255));
+        result2.setOpaque(false);
 
         img2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/download.jpg"))); // NOI18N
 
@@ -114,6 +116,8 @@ public class searchpage extends javax.swing.JFrame {
         );
 
         result3.setBackground(new java.awt.Color(255, 255, 255));
+        result3.setOpaque(false);
+    
 
         img3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/download.jpg"))); // NOI18N
 
@@ -176,8 +180,9 @@ public class searchpage extends javax.swing.JFrame {
         searchbar.setBackground(new java.awt.Color(11, 11, 11));
 
         search_btn.setBackground(new java.awt.Color(0, 0, 0));
-        search_btn.setForeground(new java.awt.Color(255, 255, 255));
-        search_btn.setText("Search");
+        search_btn.setFont(new java.awt.Font("Segoe UI Symbol", 0, 20)); // NOI18N
+        search_btn.setText("🔎");
+        search_btn.setForeground(java.awt.Color.WHITE);
         search_btn.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         search_btn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
