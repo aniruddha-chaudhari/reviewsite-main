@@ -3,11 +3,10 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package app;
+import javax.swing.ImageIcon;
+import java.awt.Image;
 
-/**
- *
- * @author Samruddhi
- */
+
 public class reviewsearch extends javax.swing.JFrame {
 
     /**
@@ -27,7 +26,7 @@ public class reviewsearch extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        search_box = new javax.swing.JTextField();
+        search_box = new app.textbx(26);
         jLabel2 = new javax.swing.JLabel();
         jPanel4 = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
@@ -36,22 +35,24 @@ public class reviewsearch extends javax.swing.JFrame {
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
 
+        //search_box.setForeground(new java.awt.Color(255, 255, 255));
         search_box.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        search_box.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        search_box.setBorder(javax.swing.BorderFactory.createCompoundBorder(search_box.getBorder(),javax.swing.BorderFactory.createEmptyBorder(5, 13, 6, 10)));
+        search_box.setOpaque(false);
         search_box.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 search_boxActionPerformed(evt);
             }
         });
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/ideogram-removebg-preview.png"))); // NOI18N
+        
+        jLabel4.setFont(new java.awt.Font("Segoe UI Symbol", 0, 20)); // NOI18N
+        jLabe14.setText("🔎");
+        jLabel4.setForeground(java.awt.Color.WHITE);
 
-        jPanel4.setBackground(new java.awt.Color(51, 51, 51));
-        jPanel4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
-
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/icons8_Search_18px.png"))); // NOI18N
+        //jLabel4.setIcon(new ImageIcon(new ImageIcon(getClass().getResource("/Image/icons8_Search_18px.png")).getImage().getScaledInstance(25, 25, Image.SCALE_SMOOTH)));
         jLabel4.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-
+        
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
         jPanel4Layout.setHorizontalGroup(
