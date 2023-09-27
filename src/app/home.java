@@ -4,30 +4,26 @@
  */
 package app;
 
-import java.awt.Color;
-import java.awt.Dimension;
-import java.awt.Graphics;
-import java.awt.Graphics2D;
 import java.awt.Image;
-import java.awt.LayoutManager;
-import java.awt.RenderingHints;
 import java.awt.Toolkit;
-    import javax.swing.ImageIcon;
-import javax.swing.JPanel;
+import javax.swing.ImageIcon;
+import java.awt.*;
+import javax.swing.*;
+import java.awt.geom.*;
+import javax.swing.border.AbstractBorder;
 
-/**
- *
- * @author Samruddhi
- */
+
+
 public class home extends javax.swing.JFrame {
 
     /**
      * Creates new form main_ui
      */
     public home() {
-       initComponents();
+        initComponents();
     }
- 
+
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -38,38 +34,43 @@ public class home extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        search_box = new javax.swing.JTextField();
         jPanel4 = new javax.swing.JPanel();
+        search_box = new app.textbx(26);
         jLabel4 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         poster_box = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        jPanel3 = new javax.swing.JPanel();
+        jPanel3 = new rectro(25);
         jLabel5 = new javax.swing.JLabel();
         mainframe = new javax.swing.JPanel();
-        embeddvideo = new RoundedPanel(80,Color.WHITE);
+        embeddvideo = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        review_panel = new javax.swing.JPanel();
+        review_panel = new rectro(25);
         Usertext = new javax.swing.JLabel();
+
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(0, 0, 0));
 
         jPanel1.setBackground(new java.awt.Color(11, 11, 11));
-
-        search_box.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        
+        search_box.setForeground(new java.awt.Color(11, 11, 11));
+        search_box.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         search_box.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        search_box.setOpaque(false);
+        search_box.setBorder(javax.swing.BorderFactory.createCompoundBorder(search_box.getBorder(),javax.swing.BorderFactory.createEmptyBorder(5, 14, 7, 10)));
         search_box.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 search_boxActionPerformed(evt);
             }
         });
 
-        jPanel4.setBackground(new java.awt.Color(51, 51, 51));
-        jPanel4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(178, 178, 178)));
-
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/icons8_Search_18px.png"))); // NOI18N
+        jPanel4.setBackground(new java.awt.Color(11, 11, 11));
+        jLabel4.setFont(new java.awt.Font("Segoe UI Symbol", 0, 20)); // NOI18N
+        jLabel4.setText("🔎");
+        jLabel4.setForeground(Color.WHITE);
+        //jLabel4.setIcon(new ImageIcon(new ImageIcon(getClass().getResource("/Image/icons8_Search_18px.png")).getImage().getScaledInstance(25, 25, Image.SCALE_SMOOTH)));
         jLabel4.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
@@ -112,7 +113,7 @@ public class home extends javax.swing.JFrame {
 
         jPanel2.setBackground(new java.awt.Color(0, 0, 0));
 
-        poster_box.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/download.jpg"))); // NOI18N
+        poster_box.setIcon(new javax.swing.ImageIcon("src/Image/download.jpg")); // NOI18N
 
         jLabel2.setFont(new java.awt.Font("Franklin Gothic Demi", 0, 18)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
@@ -125,6 +126,7 @@ public class home extends javax.swing.JFrame {
         jLabel3.setText("9/10");
 
         jPanel3.setBackground(new java.awt.Color(245, 199, 31));
+        jPanel3.setOpaque(false);
 
         jLabel5.setFont(new java.awt.Font("Franklin Gothic Demi Cond", 1, 36)); // NOI18N
         jLabel5.setText("IMDb");
@@ -153,6 +155,9 @@ public class home extends javax.swing.JFrame {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(22, 22, 22)
+                        .addComponent(poster_box))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(28, 28, 28)
                         .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 163, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel2Layout.createSequentialGroup()
@@ -160,18 +165,15 @@ public class home extends javax.swing.JFrame {
                         .addComponent(jLabel3))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(49, 49, 49)
-                        .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(36, 36, 36)
-                        .addComponent(poster_box)))
-                .addContainerGap(50, Short.MAX_VALUE))
+                        .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(94, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(20, 20, 20)
+                .addGap(14, 14, 14)
                 .addComponent(poster_box)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 162, Short.MAX_VALUE)
                 .addComponent(jLabel3)
@@ -198,6 +200,7 @@ public class home extends javax.swing.JFrame {
         jLabel1.setText("User Reviews");
 
         review_panel.setBackground(new java.awt.Color(255, 255, 255));
+        review_panel.setOpaque(false);
 
         Usertext.setBackground(new java.awt.Color(207, 207, 207));
         Usertext.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
@@ -235,7 +238,7 @@ public class home extends javax.swing.JFrame {
                     .addGroup(mainframeLayout.createSequentialGroup()
                         .addGap(12, 12, 12)
                         .addComponent(review_panel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(1023, Short.MAX_VALUE))
+                .addContainerGap(960, Short.MAX_VALUE))
         );
         mainframeLayout.setVerticalGroup(
             mainframeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -256,8 +259,8 @@ public class home extends javax.swing.JFrame {
             .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(mainframe, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(0, 0, 0)
+                .addComponent(mainframe, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -267,11 +270,6 @@ public class home extends javax.swing.JFrame {
                     .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(mainframe, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
-
-        ImageIcon imageIcon = new ImageIcon(new ImageIcon(getClass().getResource("/Image/download.jpg"))
-            .getImage().getScaledInstance(178, 283, Image.SCALE_SMOOTH));
-
-        poster_box.setIcon(imageIcon);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -333,52 +331,4 @@ public class home extends javax.swing.JFrame {
     private javax.swing.JPanel review_panel;
     private javax.swing.JTextField search_box;
     // End of variables declaration//GEN-END:variables
-
-class RoundedPanel extends JPanel
-    {
-        private Color backgroundColor;
-        private int cornerRadius = 15;
-        public RoundedPanel(LayoutManager layout, int radius) {
-            super(layout);
-            cornerRadius = radius;
-        }
-        public RoundedPanel(LayoutManager layout, int radius, Color bgColor) {
-            super(layout);
-            cornerRadius = radius;
-            backgroundColor = bgColor;
-        }
-        public RoundedPanel(int radius) {
-            super();
-            cornerRadius = radius;
-            
-        }
-        public RoundedPanel(int radius, Color bgColor) {
-            super();
-            cornerRadius = radius;
-            backgroundColor = bgColor;
-        }
-        @Override
-        protected void paintComponent(Graphics g) {
-            super.paintComponent(g);
-            Dimension arcs = new Dimension(cornerRadius, cornerRadius);
-            int width = getWidth();
-            int height = getHeight();
-            Graphics2D graphics = (Graphics2D) g;
-            graphics.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
-            //Draws the rounded panel with borders.
-            if (backgroundColor != null) {
-                graphics.setColor(backgroundColor);
-            } else {
-                graphics.setColor(getBackground());
-            }
-            graphics.fillRoundRect(0, 0, width-1, height-1, arcs.width, arcs.height); //paint background
-            graphics.setColor(getForeground());
-//            graphics.drawRoundRect(0, 0, width-1, height-1, arcs.width, arcs.height); //paint border
-//             
-        }} 
-
-
-
-
 }
-
