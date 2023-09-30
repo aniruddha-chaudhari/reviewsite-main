@@ -47,10 +47,10 @@ public class reviewsearch extends javax.swing.JFrame {
 
         
         jLabel4.setFont(new java.awt.Font("Segoe UI Symbol", 0, 20)); // NOI18N
-        jLabe14.setText("🔎");
+        jLabel4.setText("🔎");
         jLabel4.setForeground(java.awt.Color.WHITE);
 
-        //jLabel4.setIcon(new ImageIcon(new ImageIcon(getClass().getResource("/Image/icons8_Search_18px.png")).getImage().getScaledInstance(25, 25, Image.SCALE_SMOOTH)));
+        //jLabe.setIcon(new ImageIcon(new ImageIcon(getClass().getResource("/Image/icons8_Search_18px.png")).getImage().getScaledInstance(25, 25, Image.SCALE_SMOOTH)));
         jLabel4.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
