@@ -5,6 +5,9 @@
 package app;
 
 import java.awt.Color;
+import java.awt.Dimension;
+import java.awt.Image;
+import javax.swing.ImageIcon;
 
 /**
  *
@@ -32,6 +35,7 @@ public class searchpage extends javax.swing.JFrame {
         search_box = new javax.swing.JTextField();
         jPanel5 = new javax.swing.JPanel();
         jLabel5 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
         titles = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         result4 = new javax.swing.JPanel();
@@ -98,16 +102,21 @@ public class searchpage extends javax.swing.JFrame {
                 .addContainerGap(8, Short.MAX_VALUE))
         );
 
+        jLabel7.setBackground(new java.awt.Color(0, 0, 0));
+        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel7.setText("Aditya Zatu");
+
         javax.swing.GroupLayout searchbarLayout = new javax.swing.GroupLayout(searchbar);
         searchbar.setLayout(searchbarLayout);
         searchbarLayout.setHorizontalGroup(
             searchbarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(searchbarLayout.createSequentialGroup()
-                .addGap(375, 375, 375)
+                .addComponent(jLabel7)
+                .addGap(300, 300, 300)
                 .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(search_box, javax.swing.GroupLayout.PREFERRED_SIZE, 388, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(437, Short.MAX_VALUE))
         );
         searchbarLayout.setVerticalGroup(
             searchbarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -115,19 +124,25 @@ public class searchpage extends javax.swing.JFrame {
                 .addGap(13, 13, 13)
                 .addGroup(searchbarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(search_box))
+                    .addComponent(search_box)
+                    .addGroup(searchbarLayout.createSequentialGroup()
+                        .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
 
         titles.setFont(new java.awt.Font("Franklin Gothic Demi", 0, 48)); // NOI18N
         titles.setText("Titles");
+        titles.setPreferredSize(new java.awt.Dimension(160, 55));
 
+        jScrollPane1.setBorder(null);
         jScrollPane1.setPreferredSize(new java.awt.Dimension(100, 500));
 
-        result4.setBackground(new java.awt.Color(255, 255, 255));
+        result4.setBackground(new java.awt.Color(218, 218, 218));
+        result4.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
 
         result5.setBackground(new java.awt.Color(255, 255, 255));
-        result5.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(188, 188, 188), 1, true));
+        result5.setPreferredSize(new java.awt.Dimension(300, 168));
 
         img5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/download.jpg"))); // NOI18N
 
@@ -164,7 +179,7 @@ public class searchpage extends javax.swing.JFrame {
         result5Layout.setVerticalGroup(
             result5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, result5Layout.createSequentialGroup()
-                .addContainerGap(18, Short.MAX_VALUE)
+                .addContainerGap(17, Short.MAX_VALUE)
                 .addGroup(result5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(result5Layout.createSequentialGroup()
                         .addComponent(title5, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -173,13 +188,11 @@ public class searchpage extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jLabel1))
                     .addComponent(img5, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addGap(0, 17, Short.MAX_VALUE))
         );
 
         result6.setBackground(new java.awt.Color(255, 255, 255));
-        result6.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(204, 204, 204), 1, true));
-
-        img6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/download.jpg"))); // NOI18N
+        result6.setPreferredSize(new java.awt.Dimension(1016, 168));
 
         title6.setFont(new java.awt.Font("Franklin Gothic Demi", 0, 24)); // NOI18N
         title6.setText("Movie Title");
@@ -202,31 +215,40 @@ public class searchpage extends javax.swing.JFrame {
         result6Layout.setHorizontalGroup(
             result6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(result6Layout.createSequentialGroup()
-                .addGap(18, 18, 18)
+                .addGap(17, 17, 17)
                 .addComponent(img6, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(38, 38, 38)
+                .addGap(35, 35, 35)
                 .addGroup(result6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(title6, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(cate6)
                     .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 252, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(595, Short.MAX_VALUE))
+                .addContainerGap(599, Short.MAX_VALUE))
         );
         result6Layout.setVerticalGroup(
             result6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(result6Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(17, Short.MAX_VALUE)
                 .addGroup(result6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(result6Layout.createSequentialGroup()
                         .addComponent(title6, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(cate6)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(img6, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(68, 68, 68))
+                    .addGroup(result6Layout.createSequentialGroup()
+                        .addComponent(img6, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(17, Short.MAX_VALUE))))
         );
 
+        ImageIcon imageIcon = new ImageIcon(new ImageIcon(getClass().getResource("/Image/download.jpg"))
+            .getImage().getScaledInstance(178, 283, Image.SCALE_SMOOTH));
+
+        img6.setIcon(imageIcon);
+        img6.getAccessibleContext().setAccessibleDescription("");
+
         result7.setBackground(new java.awt.Color(255, 255, 255));
-        result7.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(204, 204, 204), 1, true));
+        result7.setPreferredSize(new java.awt.Dimension(1016, 168));
 
         img7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/download.jpg"))); // NOI18N
 
@@ -251,31 +273,33 @@ public class searchpage extends javax.swing.JFrame {
         result7Layout.setHorizontalGroup(
             result7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(result7Layout.createSequentialGroup()
-                .addGap(18, 18, 18)
+                .addGap(17, 17, 17)
                 .addComponent(img7, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(38, 38, 38)
+                .addGap(39, 39, 39)
                 .addGroup(result7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(title7, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(cate7)
                     .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 252, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(595, Short.MAX_VALUE))
         );
         result7Layout.setVerticalGroup(
             result7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(result7Layout.createSequentialGroup()
-                .addContainerGap(18, Short.MAX_VALUE)
-                .addGroup(result7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(result7Layout.createSequentialGroup()
+                .addContainerGap(17, Short.MAX_VALUE)
+                .addGroup(result7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, result7Layout.createSequentialGroup()
                         .addComponent(title7, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(cate7)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(img7, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(68, 68, 68))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, result7Layout.createSequentialGroup()
+                        .addComponent(img7, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(17, 17, 17))))
         );
 
         result8.setBackground(new java.awt.Color(255, 255, 255));
-        result8.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(204, 204, 204), 1, true));
 
         img8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/download.jpg"))); // NOI18N
 
@@ -300,32 +324,32 @@ public class searchpage extends javax.swing.JFrame {
         result8Layout.setHorizontalGroup(
             result8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(result8Layout.createSequentialGroup()
-                .addGap(18, 18, 18)
+                .addGap(17, 17, 17)
                 .addComponent(img8, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(38, 38, 38)
+                .addGap(37, 37, 37)
                 .addGroup(result8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(title8, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(cate8)
                     .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 252, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(597, Short.MAX_VALUE))
         );
         result8Layout.setVerticalGroup(
             result8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(result8Layout.createSequentialGroup()
-                .addContainerGap(18, Short.MAX_VALUE)
-                .addComponent(img8, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(result8Layout.createSequentialGroup()
-                .addGap(12, 12, 12)
-                .addComponent(title8, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(cate8)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addContainerGap(17, Short.MAX_VALUE)
+                .addGroup(result8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(result8Layout.createSequentialGroup()
+                        .addComponent(title8, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(1, 1, 1)
+                        .addComponent(cate8)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(img8, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(0, 17, Short.MAX_VALUE))
         );
 
         result9.setBackground(new java.awt.Color(255, 255, 255));
-        result9.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(204, 204, 204), 1, true));
+        result9.setPreferredSize(new java.awt.Dimension(427, 168));
 
         img9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/download.jpg"))); // NOI18N
 
@@ -350,27 +374,30 @@ public class searchpage extends javax.swing.JFrame {
         result9Layout.setHorizontalGroup(
             result9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(result9Layout.createSequentialGroup()
-                .addGap(18, 18, 18)
+                .addGap(17, 17, 17)
                 .addComponent(img9, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(38, 38, 38)
+                .addGap(39, 39, 39)
                 .addGroup(result9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(title9, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(cate9)
                     .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 252, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(595, Short.MAX_VALUE))
         );
         result9Layout.setVerticalGroup(
             result9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(result9Layout.createSequentialGroup()
-                .addContainerGap(18, Short.MAX_VALUE)
-                .addGroup(result9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(result9Layout.createSequentialGroup()
+                .addContainerGap(17, Short.MAX_VALUE)
+                .addGroup(result9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, result9Layout.createSequentialGroup()
                         .addComponent(title9, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(cate9)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(img9, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(68, 68, 68))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, result9Layout.createSequentialGroup()
+                        .addComponent(img9, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(17, 17, 17))))
         );
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
@@ -383,7 +410,7 @@ public class searchpage extends javax.swing.JFrame {
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 3, Short.MAX_VALUE)
+            .addGap(0, 0, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout result4Layout = new javax.swing.GroupLayout(result4);
@@ -396,28 +423,28 @@ public class searchpage extends javax.swing.JFrame {
                     .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(result4Layout.createSequentialGroup()
                         .addGroup(result4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(result5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(result6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(result8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(result7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(result9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(result9, javax.swing.GroupLayout.DEFAULT_SIZE, 1016, Short.MAX_VALUE)
+                            .addComponent(result5, javax.swing.GroupLayout.DEFAULT_SIZE, 1016, Short.MAX_VALUE))
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         result4Layout.setVerticalGroup(
             result4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(result4Layout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(0, 0, 0)
                 .addComponent(result6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(result5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(result8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(result7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(result9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -429,23 +456,27 @@ public class searchpage extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(searchbar, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(120, Short.MAX_VALUE)
+                .addContainerGap(102, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(titles, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 1024, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(85, 85, 85))
+                .addContainerGap(100, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(searchbar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addGap(15, 15, 15)
                 .addComponent(titles, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 489, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(42, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 522, Short.MAX_VALUE)
+                .addGap(0, 0, 0))
         );
+
+        jScrollPane1.getVerticalScrollBar().setPreferredSize(new Dimension(0,0));
+
+        jScrollPane1.getHorizontalScrollBar().setPreferredSize(new Dimension(0,0));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -546,6 +577,7 @@ title9.setForeground(new Color(0,0,0));          // TODO add your handling code 
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JScrollPane jScrollPane1;
